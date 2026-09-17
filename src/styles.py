@@ -12,6 +12,115 @@ EXAMPLES = [
 ]
 
 CSS = """
+/* =========================================================
+   GRADIO LAYOUT RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box !important;
+}
+
+/* Root */
+html,
+body,
+gradio-app {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Gradio outer container */
+.gradio-container {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Gradio main */
+.gradio-container .main,
+.gradio-container .main.fillable,
+.gradio-container .main.app {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Gradio wrapper */
+.gradio-container .main > .wrap,
+.gradio-container .wrap {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Main content */
+.gradio-container main.contain,
+.gradio-container .contain {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Columns */
+.gradio-container .column {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Rows */
+.gradio-container .row {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Groups */
+.gradio-container .gr-group {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
 :root {
   --twin-gold: #ecad0a;
   --twin-blue: #209dd7;
