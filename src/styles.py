@@ -47,7 +47,7 @@ html, body, gradio-app { background: var(--twin-bg) !important; }
   color: var(--twin-text) !important;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   width: 100% !important;
-  max-width: 880px !important;
+  # max-width: 100% !important;
   min-width: 0 !important;
   margin: 0 auto !important;
   padding: 32px 24px 48px !important;
