@@ -5,7 +5,6 @@ BLUE = "#209dd7"
 PURPLE = "#753991"
 
 EXAMPLES = [
-    "What skills do I already have that I can make money from?",
     "What opportunities can I pursue right now with my current skills?",
     "What career paths can I build toward based on my education and experience?",
     "What skills am I missing, and what should I learn first to become more employable?",
