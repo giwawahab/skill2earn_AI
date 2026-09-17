@@ -507,6 +507,115 @@ button[variant="primary"] svg {
     box-sizing: border-box !important;
   }
 }
+
+
+
+@media (max-width: 640px) {
+
+  /* Remove page-side spacing */
+  .gradio-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+    padding: 18px 0 30px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Keep title slightly padded */
+  .gradio-container h1 {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    font-size: 22px !important;
+  }
+
+  /* =========================================
+     MAIN CHAT CONTAINER — EDGE TO EDGE
+     ========================================= */
+
+  .chatbot,
+  .chatbot.block {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 100vw !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* Force Gradio's wrappers around the chatbot */
+  .chatbot > div,
+  .chatbot .wrap,
+  .chatbot .message-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  /* Conversation rows */
+  .chatbot .message-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* AI response can use the full container */
+  .chatbot .message,
+  .chatbot .message-bubble,
+  .chatbot .bubble {
+    max-width: 95% !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  /* =========================================
+     INPUT — ALSO EDGE TO EDGE
+     ========================================= */
+
+  .input-row,
+  .gr-input-row,
+  .chat-input-row,
+  form[class*="input"] {
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    box-sizing: border-box !important;
+  }
+
+  textarea,
+  input[type="text"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Examples */
+  .examples,
+  .examples-holder,
+  [data-testid="examples"] {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
 """
 
 JS = """
