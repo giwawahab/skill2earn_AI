@@ -347,8 +347,57 @@ button[variant="primary"] svg {
 
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
-  .gradio-container { padding: 22px 14px 36px !important; }
-  .gradio-container h1 { font-size: 22px !important; }
+  .gradio-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    padding: 22px 0 36px !important;
+    margin: 0 !important;
+  }
+
+  .gradio-container .main,
+  .gradio-container .contain,
+  .gradio-container .wrap,
+  .chatbot,
+  .chatbot.block,
+  .input-row,
+  .gr-input-row,
+  .chat-input-row,
+  form[class*="input"],
+  .examples,
+  .examples-holder,
+  [data-testid="examples"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .gradio-container h1 {
+    font-size: 22px !important;
+    margin-left: 14px !important;
+    margin-right: 14px !important;
+  }
+
+  .chatbot {
+    min-height: 460px !important;
+  }
+
+  textarea,
+  input[type="text"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .examples button,
+  .example,
+  .examples td button,
+  [data-testid="examples"] button {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
 }
 """
 
