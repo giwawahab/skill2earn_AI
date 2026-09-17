@@ -348,103 +348,52 @@ button[variant="primary"] svg {
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
 
-    /* Remove Gradio's outer mobile spacing */
-    .gradio-container {
+    /* Kill Gradio app padding */
+    div.main.fillable.app {
+        padding: 0 !important;
+        margin: 0 !important;
         width: 100vw !important;
         max-width: 100vw !important;
-
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
+        min-width: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* THIS IS THE ELEMENT SHOWN IN YOUR SCREENSHOT */
-    .gradio-container .main.fillable.app {
+    /* Kill wrapper padding */
+    div.main.fillable.app > div.wrap {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Kill main content padding */
+    div.main.fillable.app main.contain {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Make the columns full width */
+    div.main.fillable.app .column {
         width: 100% !important;
         max-width: none !important;
-
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
+        min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
         box-sizing: border-box !important;
     }
 
-    /* Remove the next Gradio wrapper spacing */
-    .gradio-container .main.fillable.app > .wrap {
-        width: 100% !important;
-        max-width: none !important;
-
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* Main content */
-    .gradio-container main.contain {
-        width: 100% !important;
-        max-width: none !important;
-
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* Keep your heading/text away from the screen edge */
-    .gradio-container h1,
-    .gradio-container h1 + *,
-    .gradio-container > .main .column > h1 {
-        margin-left: 16px !important;
-        margin-right: 16px !important;
-    }
-
-    /* CHAT CONTAINER */
+    /* Actual chatbot */
+    div.main.fillable.app
     .block:has(> .wrapper > [role="log"][aria-label="chatbot conversation"]) {
-        width: 100% !important;
-        max-width: none !important;
-
+        width: 100vw !important;
+        max-width: 100vw !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
-
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* Chat's inner wrapper */
-    .block:has(> .wrapper > [role="log"][aria-label="chatbot conversation"]) > .wrapper {
-        width: 100% !important;
-        max-width: none !important;
-
-        margin: 0 !important;
         padding: 0 !important;
-
-        box-sizing: border-box !important;
-    }
-
-    /* Actual chat area */
-    [role="log"][aria-label="chatbot conversation"] {
-        width: 100% !important;
-        max-width: none !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
         box-sizing: border-box !important;
     }
 }
