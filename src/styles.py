@@ -347,23 +347,132 @@ button[variant="primary"] svg {
 
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
-  .gradio-container {
+
+  /* ===== FULL-WIDTH MOBILE LAYOUT ===== */
+
+  html,
+  body,
+  gradio-app {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
-    padding: 22px 0 36px !important;
     margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
   }
 
+  .gradio-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 18px 4px 30px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ===== FORCE ALL MAIN GRADIO CONTAINERS FULL WIDTH ===== */
+
+  .gradio-container > *,
   .gradio-container .main,
   .gradio-container .contain,
   .gradio-container .wrap,
+  .gradio-container .block,
+  .gradio-container .form,
+  .gradio-container .row,
+  .gradio-container .column {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ===== TITLE ===== */
+
+  .gradio-container h1 {
+    width: auto !important;
+    max-width: none !important;
+    margin: 4px 8px 8px !important;
+    padding-left: 10px !important;
+    font-size: 22px !important;
+  }
+
+  /* ===== CHATBOT ===== */
+
   .chatbot,
-  .chatbot.block,
+  .chatbot.block {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Make the chatbot content use the available width */
+  .chatbot > *,
+  .chatbot .wrap,
+  .chatbot .message-wrap,
+  .chatbot .message-row {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ===== AI / USER MESSAGES ===== */
+
+  .message-row {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .message-row .message,
+  .message-row .message-bubble,
+  .message-row .bubble {
+    max-width: calc(100vw - 14px) !important;
+    box-sizing: border-box !important;
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  /* ===== INPUT AREA ===== */
+
   .input-row,
   .gr-input-row,
   .chat-input-row,
-  form[class*="input"],
+  form[class*="input"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ===== TEXTAREA ===== */
+
+  textarea,
+  input[type="text"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ===== SUBMIT BUTTON ===== */
+
+  button.submit,
+  button.submit-button,
+  .submit-button,
+  button.primary {
+    min-width: 48px !important;
+    max-width: 48px !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* ===== EXAMPLES ===== */
+
   .examples,
   .examples-holder,
   [data-testid="examples"] {
@@ -372,23 +481,13 @@ button[variant="primary"] svg {
     min-width: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    box-sizing: border-box !important;
   }
 
-  .gradio-container h1 {
-    font-size: 22px !important;
-    margin-left: 14px !important;
-    margin-right: 14px !important;
-  }
-
-  .chatbot {
-    min-height: 460px !important;
-  }
-
-  textarea,
-  input[type="text"] {
+  .examples table,
+  .examples-table {
     width: 100% !important;
     max-width: 100% !important;
-    box-sizing: border-box !important;
   }
 
   .examples button,
@@ -396,6 +495,15 @@ button[variant="primary"] svg {
   .examples td button,
   [data-testid="examples"] button {
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* ===== PREVENT ANY ELEMENT FROM CREATING HORIZONTAL SCROLL ===== */
+
+  .gradio-container * {
+    min-width: 0 !important;
     box-sizing: border-box !important;
   }
 }
