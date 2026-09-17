@@ -348,210 +348,105 @@ button[variant="primary"] svg {
 /* ---------- Mobile ---------- */
 @media (max-width: 640px) {
 
-  /* =========================================
-     REMOVE GRADIO'S SIDE PADDING
-     ========================================= */
+    /* Remove Gradio's outer mobile spacing */
+    .gradio-container {
+        width: 100vw !important;
+        max-width: 100vw !important;
 
-  .gradio-container {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
-    margin: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-    padding-top: 18px !important;
-    padding-right: 0 !important;
-    padding-bottom: 30px !important;
-    padding-left: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    box-sizing: border-box !important;
-  }
+    /* THIS IS THE ELEMENT SHOWN IN YOUR SCREENSHOT */
+    .gradio-container .main.fillable.app {
+        width: 100% !important;
+        max-width: none !important;
 
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
-  /* =========================================
-     REMOVE WIDTH RESTRICTIONS FROM GRADIO
-     WRAPPERS
-     ========================================= */
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-  .gradio-container > .main,
-  .gradio-container .main,
-  .gradio-container .main > .wrap,
-  .gradio-container .wrap,
-  .gradio-container main.contain,
-  .gradio-container .contain,
-  .gradio-container .column {
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    /* Remove the next Gradio wrapper spacing */
+    .gradio-container .main.fillable.app > .wrap {
+        width: 100% !important;
+        max-width: none !important;
 
-    box-sizing: border-box !important;
-    
-    
-    padding-left: unset !important;
-    padding-right: unset !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
-  }
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
+        box-sizing: border-box !important;
+    }
 
-  /* =========================================
-     THE ACTUAL CHAT BLOCK
+    /* Main content */
+    .gradio-container main.contain {
+        width: 100% !important;
+        max-width: none !important;
 
-     This targets the .block that contains:
-     <div role="log" aria-label="chatbot conversation">
-     ========================================= */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
-  .block:has(> .wrapper > [role="log"]) {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 100vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    /* Keep your heading/text away from the screen edge */
+    .gradio-container h1,
+    .gradio-container h1 + *,
+    .gradio-container > .main .column > h1 {
+        margin-left: 16px !important;
+        margin-right: 16px !important;
+    }
 
-    box-sizing: border-box !important;
-  }
+    /* CHAT CONTAINER */
+    .block:has(> .wrapper > [role="log"][aria-label="chatbot conversation"]) {
+        width: 100% !important;
+        max-width: none !important;
 
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-  /* =========================================
-     CHAT WRAPPER
-     ========================================= */
+        padding-left: 0 !important;
+        padding-right: 0 !important;
 
-  .block:has(> .wrapper > [role="log"]) > .wrapper {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+        box-sizing: border-box !important;
+    }
 
-    margin: 0 !important;
-    padding: 0 !important;
+    /* Chat's inner wrapper */
+    .block:has(> .wrapper > [role="log"][aria-label="chatbot conversation"]) > .wrapper {
+        width: 100% !important;
+        max-width: none !important;
 
-    box-sizing: border-box !important;
-  }
+        margin: 0 !important;
+        padding: 0 !important;
 
+        box-sizing: border-box !important;
+    }
 
-  /* =========================================
-     ACTUAL CONVERSATION AREA
-     ========================================= */
+    /* Actual chat area */
+    [role="log"][aria-label="chatbot conversation"] {
+        width: 100% !important;
+        max-width: none !important;
 
-  [role="log"][aria-label="chatbot conversation"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
 
-    margin: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================================
-     MESSAGE ROWS
-     ========================================= */
-
-  [role="log"] .message-row {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================================
-     AI RESPONSE BUBBLE
-     ========================================= */
-
-  [role="log"] .message,
-  [role="log"] .message-bubble,
-  [role="log"] .bubble {
-    max-width: 95% !important;
-    box-sizing: border-box !important;
-
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
-  }
-
-
-  /* =========================================
-     INPUT ROW
-     ========================================= */
-
-  .gr-group,
-  .gr-group > .gr-group,
-  .styler,
-  .styler > .row,
-  .row {
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================================
-     INPUT FORM
-     ========================================= */
-
-  .form {
-    width: 100% !important;
-    max-width: none !important;
-    min-width: 0 !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================================
-     TEXTAREA
-     ========================================= */
-
-  textarea[data-testid="textbox"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================================
-     EXAMPLES
-     ========================================= */
-
-  [data-testid="examples"],
-  .examples {
-    width: 100% !important;
-    max-width: 100% !important;
-
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-
-    box-sizing: border-box !important;
-  }
-
-
-  /* =========================================
-     TITLE — KEEP A LITTLE SIDE SPACE
-     ========================================= */
-
-  .gradio-container h1 {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
-
-    font-size: 22px !important;
-  }
+        box-sizing: border-box !important;
+    }
 }
 """
 
